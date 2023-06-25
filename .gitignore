@@ -37,5 +37,6 @@ out/
 .vscode/
 
 ### DataBase ###
+data/*
 /data/*
 /data/*/

@@ -1,0 +1,23 @@
+version: "3.5"
+
+networks:
+  click-service-project:
+    name: click-service-project
+
+services:
+  clickserv-postgres:
+    container_name: click-service-project-postgres
+    environment:
+      POSTGRES_DB: click-service-project
+      POSTGRES_USER: click-service-project
+      POSTGRES_PASSWORD: PIh4Yrv75BLP1SuXY9XU
+    image: postgres:12.2-alpine
+    networks:
+      click-service-project:
+        aliases:
+          - postgres.clickserv
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data

@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /v1/
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/click-service-project
+    username: click-service-project
+    password: PIh4Yrv75BLP1SuXY9XU
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+logging:
+  level:
+    web: DEBUG
